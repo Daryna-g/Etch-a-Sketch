@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lobster:regular" rel="stylesheet" /> -->
+	<link href="https://fonts.googleapis.com/css?family=Freckle+Face:regular&display=swap" rel="stylesheet" />
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="stylesheet" href="style.css">
 
@@ -12,7 +13,26 @@
 </head>
 
 <body>
+	<main class="page">
+		<div class="pad-container">
+			<hi class="title">Etch A Sketch</hi>
+			<div class="board"></div>
+		</div>
 
+		<div class="menu">
+			<div class="buttons">
+				<button id="black" class="button">Black</button>
+				<button id="black" class="button">Gray</button>
+				<button id="black" class="button">Random</button>
+				<button id="black" class="button">Erase</button>
+				<button id="black" class="button">Reset</button>
+			</div>
+			<div class="resize">
+				<input type="text" id="sizeInput" placeholder="Set Size: 2 - 100">
+				<button id="resizeBtn">Resize</button>
+			</div>
+		</div>
+	</main>
 
 	<script src="script.js"></script>
 </body>

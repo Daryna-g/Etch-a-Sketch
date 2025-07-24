@@ -18,3 +18,110 @@ input,
 button {
   font: inherit;
 }
+
+:root {
+	--grey-bg: #bbbbbb;
+
+	--text: #332F2D;
+	--orange: #DB7639;
+	--dark-orange: #a84507;
+	--bg: #4F9A9C;
+}
+
+body{
+	min-height: 100vh;
+	font-size: 18px;
+	line-height: 1.5;
+	font-family: "Freckle Face", monospace;
+	background-color: var(--bg);
+	
+ 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.page {
+	display: flex;
+	color: var(--text);
+}
+
+.pad-container {
+	/* width: 800px;
+	height: 700px; */
+	/* text-align: center; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 2rem;
+	border-radius: 2rem;
+	/* background-color: #39A5DB; */
+	/* background-color: rgb(191, 16, 16); */
+	/* box-shadow: inset 4px 10px 10px 4px var(--dark-red); */
+}
+.title {
+	font-size: 48px;
+	/* color: var(--yellow); */
+}
+
+.board {
+	display: grid;
+	width: 550px;
+	height: 550px;
+	margin: auto;
+	background-color: var(--grey-bg);
+}
+
+.menu {
+	/* #3972DB
+	#39DBA7 */
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	padding: 2rem;
+	border-radius: 2rem;
+}
+.buttons {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: 1rem;
+}
+.button {
+	width: 100%;
+	padding: 10px;
+	/* border-radius: 10px; */
+	background-color: var(--orange);
+	box-shadow: inset 4px 10px 10px 4px var(--dark-orange);
+	border: 1px solid var(--dark-orange);
+}
+
+.resize {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}
+
+#sizeInput {
+	width: 100%;
+	padding: 8px 10px;
+	background-color: #d0bbaf;
+	border: 3px solid #465B5C;
+}
+#resizeBtn {
+	width: 100%;
+	padding: 1rem;
+	background-color: #465B5C;
+	color: #ff6f15;
+	border: 3px solid #ff6f15;
+}
