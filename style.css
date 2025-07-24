@@ -38,8 +38,8 @@ body{
  	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	padding: 2rem;
+	/* justify-content: center; */
+	padding-inline: 2rem;
 }
 
 .page {
@@ -54,13 +54,9 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 	gap: 1rem;
 	padding: 2rem;
-	border-radius: 2rem;
-	/* background-color: #39A5DB; */
-	/* background-color: rgb(191, 16, 16); */
-	/* box-shadow: inset 4px 10px 10px 4px var(--dark-red); */
 }
 .title {
 	font-size: 48px;
@@ -71,8 +67,9 @@ body{
 	display: grid;
 	width: 550px;
 	height: 550px;
-	margin: auto;
+	/* margin: auto; */
 	background-color: var(--grey-bg);
+	border: 5px solid var(--text);
 }
 
 .menu {
@@ -82,10 +79,14 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	/* align-self: center; */
+	/* justify-content: center; */
 	gap: 3rem;
 	padding: 2rem;
 	border-radius: 2rem;
+	margin-top: 120px;
+	margin-bottom: 80px;
+
 }
 .buttons {
 	width: 100%;
@@ -102,7 +103,16 @@ body{
 	background-color: var(--orange);
 	box-shadow: inset 4px 10px 10px 4px var(--dark-orange);
 	border: 1px solid var(--dark-orange);
+	cursor: pointer;
 }
+.button:hover{
+	background-color: #dc9264;
+}
+
+.button:focus{
+	background-color: var(--dark-orange);
+}
+
 
 .resize {
 	width: 100%;
@@ -124,4 +134,8 @@ body{
 	background-color: #465B5C;
 	color: #ff6f15;
 	border: 3px solid #ff6f15;
+	cursor: pointer;
+}
+#resizeBtn:hover {
+	background-color: #3a4b4c;
 }
