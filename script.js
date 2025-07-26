@@ -1,6 +1,9 @@
 let color = 'black';
 const blackBtn = document.getElementById("black");
 const grayBtn = document.getElementById("gray");
+const randomBtn = document.getElementById("random");
+const eraseBtn = document.getElementById("erase");
+const resetBtn = document.getElementById("reset");
 
 function populateBoard(size) {
 	let board = document.querySelector(".board");
@@ -31,18 +34,26 @@ function changeSize(input) {
 	}
 }
 
-
-
-
-
 function colorSquares() {
-	this.style.backgroundColor = color;
+	if (color === "random") {
+		this.style.backgroundColor = `hsla(${Math.random() * 360}, 100%, 50%, 1)`;
+	} else {
+		this.style.backgroundColor = color;
+	}
 }
-// colorSquares('black');
 
 function changeColor(choise) {
 	color = choise;
 }
 
-blackBtn.addEventListener("click", () => changeColor("black"));
+function resetBoard() {
+	let board = document.querySelector(".board");
+	let squares = board.querySelectorAll("div");
+	squares.forEach((div) => div.style.backgroundColor = "#bbbbbb");
+}
+
+blackBtn.addEventListener("click", () => changeColor('black'));
 grayBtn.addEventListener("click", () => changeColor('gray'));
+randomBtn.addEventListener("click", () => changeColor('random'));
+eraseBtn.addEventListener("click", () => changeColor('#bbbbbb'));
+resetBtn.addEventListener("click", () => resetBoard());
