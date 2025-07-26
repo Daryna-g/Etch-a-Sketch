@@ -22,13 +22,13 @@
 		<div class="menu">
 			<div class="buttons">
 				<button id="black" class="button">Black</button>
-				<button id="black" class="button">Gray</button>
-				<button id="black" class="button">Random</button>
-				<button id="black" class="button">Erase</button>
-				<button id="black" class="button">Reset</button>
+				<button id="gray" class="button">Gray</button>
+				<button id="random" class="button">Random</button>
+				<button id="erase" class="button">Erase</button>
+				<button id="reset" class="button">Reset</button>
 			</div>
 			<div class="resize">
-				<input type="text" id="sizeInput" placeholder="Set Size: 2 - 100">
+				<input type="text" id="sizeInput" placeholder="Set Size: 2 - 100" onchange="changeSize(this.value)">
 				<button id="resizeBtn">Resize</button>
 			</div>
 		</div>
