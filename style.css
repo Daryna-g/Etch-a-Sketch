@@ -48,6 +48,9 @@ body{
 .cell {
 	border: 1px solid #332F2D;
 }
+.error-message {
+	display: none;
+}
 
 .page {
 	display: flex;

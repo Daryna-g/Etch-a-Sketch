@@ -1,4 +1,5 @@
 let color = 'black';
+let click = true;
 const blackBtn = document.getElementById("black");
 const grayBtn = document.getElementById("gray");
 const randomBtn = document.getElementById("random");
@@ -30,19 +31,23 @@ function populateBoard(size) {
 populateBoard(16);
 
 function changeSize(input) {
-	if (input >= 2 || input <= 100) {
+	if (input >= 2 && input <= 100) {
+		document.querySelector(".error-message").style.display = 'none';
 		populateBoard(input);
 	} else {
-		console.log('Too many squares');
+		document.querySelector(".error-message").style.display = 'flex';
 	}
 }
 
 function colorSquares() {
-	if (color === "random") {
-		this.style.backgroundColor = `hsla(${Math.random() * 360}, 100%, 50%, 1)`;
-	} else {
-		this.style.backgroundColor = color;
+	if (click) {
+		if (color === "random") {
+			this.style.backgroundColor = `hsla(${Math.random() * 360}, 100%, 50%, 1)`;
+		} else {
+			this.style.backgroundColor = color;
+		}
 	}
+
 }
 
 function changeColor(choise) {
@@ -64,3 +69,7 @@ grayBtn.addEventListener("click", () => changeColor('gray'));
 randomBtn.addEventListener("click", () => changeColor('random'));
 eraseBtn.addEventListener("click", () => changeColor('#bbbbbb'));
 resetBtn.addEventListener("click", () => resetBoard());
+
+document.querySelector('body').addEventListener('click', () => {
+	click = !click;
+});
