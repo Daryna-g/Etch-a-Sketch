@@ -5,6 +5,9 @@ const randomBtn = document.getElementById("random");
 const eraseBtn = document.getElementById("erase");
 const resetBtn = document.getElementById("reset");
 
+const customColorInput = document.getElementById("customColor");
+
+
 function populateBoard(size) {
 	let board = document.querySelector(".board");
 	let squares = board.querySelectorAll("div");
@@ -45,6 +48,10 @@ function colorSquares() {
 function changeColor(choise) {
 	color = choise;
 }
+
+customColorInput.addEventListener("input", (e) => {
+	changeColor(e.target.value);
+});
 
 function resetBoard() {
 	let board = document.querySelector(".board");
