@@ -4,9 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Lobster:regular" rel="stylesheet" /> -->
 	<link href="https://fonts.googleapis.com/css?family=Freckle+Face:regular&display=swap" rel="stylesheet" />
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
 	<link rel="stylesheet" href="style.css">
 
 	<title>Etch-a-Sketch Project</title>
@@ -34,11 +33,10 @@
 			<div class="resize">
 				<input type="text" id="sizeInput" placeholder="Set Size: 2 - 100" onchange="changeSize(this.value)">
 				<button id="resizeBtn">Resize</button>
-				<div class="error-message">
-					Input must be between 2 and 100
-				</div>
 			</div>
-
+			<div class="error-message">
+				Input must be between 2 and 100
+			</div>
 		</div>
 	</main>
 
